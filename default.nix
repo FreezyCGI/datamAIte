@@ -1,4 +1,4 @@
 { pkgs ? import <nixpkgs> {} }:
 {
-  hello-nix = import ./nix/hello.nix { inherit pkgs; };
+  datamaite = import ./nix/datamaite.nix { inherit pkgs; };
 }

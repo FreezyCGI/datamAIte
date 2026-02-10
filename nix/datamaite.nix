@@ -1,10 +1,10 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.stdenv.mkDerivation {
-  pname = "hello-nix";
+  pname = "datamaite";
   version = "0.1.0";
 
-  src = ./.;
+  src = ../.;
 
   buildInputs = [ pkgs.bash ];
 
@@ -12,8 +12,8 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp ${src}/hello.sh $out/bin/hello-nix
-    chmod +x $out/bin/hello-nix
+    cp $src/hello.sh $out/bin/datamaite
+    chmod +x $out/bin/datamaite
   '';
 
   meta = with pkgs.lib; {
