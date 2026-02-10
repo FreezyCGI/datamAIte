@@ -33,5 +33,7 @@
         };
         default = self.apps.${system}.datamaite;
       });
+
+      nixosModules.default = import ./nix/module.nix;
     };
 }
